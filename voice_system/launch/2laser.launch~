@@ -1,0 +1,12 @@
+<launch>
+    <node name="talker" pkg="talker" type="talker">
+		<param name="serial_port" value="/dev/ttyUSB1"/>
+		<param name="scan_topic" value="scan"/>
+		<param name="laser_link" value="laser"/>
+		<param name="zero_as_max" value="false"/>
+		<param name="angle_disable_min" value="90"/>
+		<param name="angle_disable_max" value="270"/>
+    </node>
+  <node pkg="tf" type="static_transform_publisher" name="base_to_laser" args="0.135 0.0 0.42 0.0 0.0 0.0 base_link laser 100"/>
+</launch>
+

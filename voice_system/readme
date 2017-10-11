@@ -1,0 +1,16 @@
+图灵编译:
+首先程序中会用到Json，curl
+安装相应的库
+$ sudo apt-get install libcurl3 libcurl4-openssl-dev
+$ sudo apt-get install libjsoncpp0 libjsoncpp-dev
+关机重启
+迅飞库放在usr/lib下
+1.进入对应的库目录
+2.运行sudo cp libmsc.so /usr/lib
+
+安装命令行播放组件
+sudo apt-get install sox
+
+测试
+1.roslaunch voice_system voice.launch 
+2.发布命令   rostopic pub -1 /voice/xf_asr_topic std_msgs/Int32 1

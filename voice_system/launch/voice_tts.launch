@@ -1,0 +1,20 @@
+<launch>
+    <node name="xf_tts" pkg="voice_system" type="xf_tts" output="screen">
+		<param name="serial_port" value="/dev/ttyUSB1"/>
+    </node>
+
+   <node name="tuling_nlu" pkg="voice_system" type="tuling_nlu" output="screen">
+		<param name="serial_port" value="/dev/ttyUSB1"/>
+    </node>
+
+    <node name="xf_asr" pkg="voice_system" type="xf_asr" output="screen">
+		<param name="serial_port" value="/dev/ttyUSB1"/>
+    </node>
+
+     <node name="start_asr" pkg="voice_system" type="sound_localization" output="screen">
+		<param name="port" value="/dev/ttyUSB0"/>
+    	<param name="baud" value="115200"/>
+    </node>
+
+</launch>
+
