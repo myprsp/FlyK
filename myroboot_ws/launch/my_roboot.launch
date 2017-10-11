@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<launch>
+  <include file="$(find myroboot)/launch/rosbridge_websocket.launch"></include>
+
+  <node name="FlyKRoboot" pkg="myroboot" type="my_roboot.py" respawn="false" output="screen">
+    <!-- default values: -->
+    <!--
+      <param name="min_ang" type="double" value="-2.35619449019" />
+    -->
+  </node>
+
+  <node name="FlyKRobootNaviInit" pkg="myroboot" type="naviInit.py" respawn="false" output="screen">
+    <!-- default values: -->
+    <!--
+      <param name="min_ang" type="double" value="-2.35619449019" />
+    -->
+  </node>
+</launch>
